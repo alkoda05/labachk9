@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <style>
+        <!--Задание цвета и шрифта-->
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        input[type="submit"] {
+            background-color: red;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<!--Начало содержания страницы-->
+<body>
+    <div class="container">
+        <h1>Оставьте ваш отзыв!</h1>
+        <!--Куда отправить и каким методом-->
+        <form action="/reviews" method="POST">
+            <!--Имя поля, подсказка, обязательное поле-->
+            <textarea name="text" placeholder="Введите ваш отзыв" required></textarea>
+            <!--Обязательный выбор, выбор звезды-->
+            <select name="rate" required>
+                <option value="1">1 звезда</option>
+                <option value="2">2 звезды</option>
+                <option value="3">3 звезды</option>
+                <option value="4">4 звезды</option>
+                <option value="5">5 звезд</option>
+            </select>
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+</body>
+</html>
